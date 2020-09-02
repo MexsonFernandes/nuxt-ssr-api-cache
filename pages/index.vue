@@ -2,14 +2,8 @@
   <div class="container">
     <div>
       <Logo />
-      <h3 class="title is-3">API call is {{$store.state.api_call}}</h3>
-      <h1 class="title" v-if="$store.state.temp">
-        Temperature in Delhi (India) at build time: <span> {{$store.state.temp}}&deg;C </span>
+      <h1 class="title" v-if="$store.state.svg" v-html="$store.state.svg">
       </h1>
-      <div class="card">
-
-        
-      </div>
     </div>
   </div>
 </template>

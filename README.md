@@ -1,8 +1,9 @@
 # nuxt-ssr-api-cache
 
+App is deployed on Vercel at https://nuxt-ssr-api-cache.vercel.app/
+
 Now save bucks by caching the api calls.
 
-Lets see the weather at the build time.
 
 So the plan is,
 - SSR will cache the server api calls.

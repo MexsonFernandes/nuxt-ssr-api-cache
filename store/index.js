@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 export const state = () => ({
-    temp: null,
+    svg: null,
     api_call: false
 })
 
 export const mutations = {
-    WEATHER(state, res) {
-        // default temp is in kelvin, so converting it to celcius
-        state.temp = res.data.main.temp - 273.15
+    SVG(state, res) {
+        console.log(res)
+        state.svg = res.data
     },
     API_CALL(state) {
         state.api_call = true
@@ -17,8 +17,9 @@ export const mutations = {
 
 export const actions = {
     async nuxtServerInit({commit}) {
-        commit('WEATHER',
-            await axios.get('http://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=' + process.env.API_KEY)
+        console.log('Hitting api')
+        commit('SVG',
+            await axios.get('https://github-counter.glitch.me/api_call.svg')
         )
         commit('API_CALL')
     }
