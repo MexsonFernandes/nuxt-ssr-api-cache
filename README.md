@@ -2,6 +2,8 @@
 
 App is deployed on Vercel at https://nuxt-ssr-api-cache.vercel.app/
 
+API at https://github-counter.glitch.me/api_call.svg.
+
 Now save bucks by caching the api calls.
 
 
